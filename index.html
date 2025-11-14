@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Football Manager Challenges</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Logo" class="header-logo">
+  </header>
+
+  <!-- Import / Export Buttons -->
+  <div class="button-container">
+    <button id="import-btn">Import</button>
+    <button id="export-btn">Export</button>
+    <input type="file" id="file-input" accept=".json" hidden>
+  </div>
+
+  <!-- Active Challenge Section -->
+  <section id="active-challenge-section">
+    <h2>Active Challenge</h2>
+    <div id="active-challenge-container">No challenge selected.</div>
+  </section>
+
+  <!-- Re-generate Button -->
+  <div class="button-container">
+    <button id="regenerate-btn">Re-generate 3 random challenges</button>
+  </div>
+
+  <!-- Challenge Container -->
+  <main id="challenge-container"></main>
+
+  <!-- Completed Challenges Section -->
+
+  <script src="script.js"></script>
+</body>
+</html>

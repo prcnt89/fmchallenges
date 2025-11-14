@@ -1,0 +1,283 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  background-color: #1e1e1e;
+  padding: 1.5rem 0;
+  border-bottom: 2px solid #333;
+}
+
+.header-logo {
+    width: 300px;
+    display: block;
+    margin: 0 auto; /* zentriert das Logo */
+}
+
+h1 {
+  margin: 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.button-container button {
+  background-color: #333;
+  color: #f0f0f0;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: #555;
+}
+
+#regenerate-btn {
+  padding: 0.8rem 1.4rem;
+}
+
+.challenge-card {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.challenge-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+.challenge-card ul.tasks {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#active-challenge-container ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.challenge-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+h2, h3 {
+  text-align: center;
+  margin: 0.5rem 0;
+  color: #f0f0f0;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin: 0.5rem 0 1rem 0;
+  text-align: center;
+}
+
+#challenge-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+  padding: 0 1rem;
+}
+
+#completed-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-width: 500px;
+  margin: 0 auto 2rem auto;
+  padding: 0 1rem;
+}
+
+#active-challenge-section {
+  text-align: center;
+  background-color: #1f1f1f;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+#active-challenge-container {
+  text-align: left;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+#active-challenge-container ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+#active-challenge-container img {
+  display: block;
+  margin: 0 auto 1rem auto;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+#active-challenge-container li {
+  margin: 0.4rem 0;
+}
+
+#active-challenge-container input[type="checkbox"] {
+  accent-color: gold;
+}
+
+.star-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.stars {
+  display: inline-block;
+  font-family: monospace;
+}
+
+.stars span.filled {
+  color: gold;
+}
+
+.stars span.empty {
+  color: white;
+}
+
+.choose-btn,
+#completed-btn {
+  display: block;
+  margin: 1rem auto 0 auto;
+  background-color: #333;
+  color: #f0f0f0;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.choose-btn:hover,
+#completed-btn:hover {
+  background-color: #555;
+}
+
+.tasks {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.tasks li {
+  margin: 0.4rem 0;
+}
+
+.challenge-logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.completed-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1f1f1f;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.check-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.8rem;
+}
+
+.completed-name {
+  flex: 1;
+  color: #f0f0f0;
+  font-weight: 500;
+}
+
+.remove-btn {
+  background-color: #800000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.remove-btn:hover {
+  background-color: #ff0000;
+}
+
+.active-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.active-header h3 {
+  margin: 0;
+}
+
+.remove-active-btn {
+  position: absolute;
+  top: -0.5rem;
+  right: 0;
+  background-color: #800000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.remove-active-btn:hover {
+  background-color: #ff0000;
+}
