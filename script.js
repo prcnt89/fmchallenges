@@ -56,6 +56,7 @@ const challenges = [
 let activeChallenge = null;
 let completedChallenges = [];
 let displayedChallenges = [];
+let showingAll = false;
 
 // --- HTML Container ---
 const container = document.getElementById("challenge-container");
@@ -183,9 +184,19 @@ function renderCompletedChallenges() {
 
 // --- Re-generate Button ---
 document.getElementById("regenerate-btn").addEventListener("click", ()=>{
+  showingAll = false;
   getRandomChallenges();
   renderChallenges();
 });
+
+// --- Show All Challenges Button ---
+document.getElementById("show-all-btn").addEventListener("click", showAllChallenges);
+
+function showAllChallenges() {
+  showingAll = true;
+  displayedChallenges = [...challenges]; 
+  renderChallenges();
+}
 
 // --- Export Active Challenge ---
 function getActiveChallengeExport(){
